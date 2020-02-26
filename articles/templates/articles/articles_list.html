@@ -1,3 +1,12 @@
-{% for article in articles %}
-    <h3>{% article %}</h3>
-{% endfor %}
+{% extends 'articles/base.html' %}
+
+{% block content %}
+
+<h3>Article List</h3>
+	{% for post in posts %}
+    	<a href="#"><h5>{{ post.title }}</h5></a>
+    	<p class='small'>{{ post.date }}</p>	
+    	<p1>{{ post.snippet }}</p1>
+	{% endfor %}
+
+{% endblock %}
