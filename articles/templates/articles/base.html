@@ -18,7 +18,7 @@
 <div class="shadow-sm bg-white rounded">
 <nav class="navbar navbar-expand-lg navbar-dark">
 <div class="container">
-  <a class="navbar-brand" href="#"><h3>portfolio
+  <a class="navbar-brand" href="{% url 'articles_list' %}"><h3>portfolio
   	<img src="static/book.svg"></h3>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,10 +27,7 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="{% url 'articles_list' %}">home <span class="sr-only">(current)</span></a>
-      </li>
-	<li class="nav-item active">
+	     <li class="nav-item active">
         <a class="nav-link" href="#">login <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">

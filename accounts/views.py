@@ -10,9 +10,9 @@ def register(request):
 		if form.is_valid():
 			form.save()
 			return redirect('/articles')
-
-	form = uc_form()
-	context = {
-		'form': form
-	}
+	else:		
+		form = uc_form()
+		context = {
+			'form': form
+		}
 	return render(request, 'accounts/register.html', context)
