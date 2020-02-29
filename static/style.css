@@ -18,7 +18,7 @@ a.tits {
 	padding: 2%;
 	color: white;
 	margin-top: 4%;
-	border-radius: 50px 0px 50px 0px;
+	border-radius: 70px 0px 70px 0px;
 	font-family: 'Montserrat';
 }
 
@@ -33,6 +33,10 @@ a.tits {
 	font-family: 'Montserrat';
 	padding-top: 5%;
 	padding-bottom: 5%;
+}
+
+.searchbox{
+	border-radius: 50px !important;
 }
 
 
