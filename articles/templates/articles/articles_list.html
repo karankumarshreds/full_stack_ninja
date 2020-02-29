@@ -1,14 +1,27 @@
 {% extends 'articles/base.html' %}
 
 {% block content %}
+<div class="my-bio container my-3">
+	<!-- align-items-center aligns each cell in the center vertically -->
+	<div class="row align-items-center">
+		<div class="col-md-4 col-sm-6align-self-stretch mt-3">
+			<img src="static/img.jpg" width="200px"></br>
+		</div>
+		<div class="col-md-8 col-sm-6 pt-3">
+			<h1>Karan Kumar</h1>
+			<p>Quick learner and a technology enthusiast with experience in IT infrastructure primarily in Python development, Linux,  DevOps & Automation. Substantial knowledge of several  DevOps/AWS tools,  automating daily tasks using  Bash/Python scripting, building WebApps in Django Framework  and configuration management. </p>
+		</div>
+	</div>
+</div>
 
-<img src="static/img.jpg" width="200px"></br>
-
-<h3 class="mt-2">Article List</h3>
-	{% for post in posts %}
-    	<a href="{% url 'this_post' post_id=post.id %}"><h5>{{ post.title }}</h5></a>
-    	<p class='small'>{{ post.date }}</p>	
-    	<p1>{{ post.snippet }}</p1>
-	{% endfor %}
-
+<div class="bg-custom">
+	<div class="container">
+		<h1 class="article-list">My Skills</h1>
+		{% for post in posts %}
+	    	<h5 class="title"><a class="tits" href="{% url 'this_post' post_id=post.id %}">{{ post.title }}</a></h5>
+	    	<p class='small'>{{ post.date }}</p>	
+	    	<p1>{{ post.snippet }}</p1>
+		{% endfor %}
+	</div>	
+</div>
 {% endblock %}
