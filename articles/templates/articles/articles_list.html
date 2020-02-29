@@ -2,7 +2,9 @@
 
 {% block content %}
 
-<h3>Article List</h3>
+<img src="static/img.jpg" width="200px"></br>
+
+<h3 class="mt-2">Article List</h3>
 	{% for post in posts %}
     	<a href="{% url 'this_post' post_id=post.id %}"><h5>{{ post.title }}</h5></a>
     	<p class='small'>{{ post.date }}</p>	

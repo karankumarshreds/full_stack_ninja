@@ -18,7 +18,7 @@
 <div class="shadow-sm bg-white rounded">
 <nav class="navbar navbar-expand-lg navbar-dark">
 <div class="container">
-  <a class="navbar-brand" href="#"><h3>posts
+  <a class="navbar-brand" href="#"><h3>portfolio
   	<img src="static/book.svg"></h3>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,12 +34,12 @@
         <a class="nav-link" href="#">login <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">register <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'register' %}">register <span class="sr-only">(current)</span></a>
       </li>          
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="search post" aria-label="Search">
-      <button class="btn my-2 my-sm-0 text-white" type="submit"><h4>search</h4></button>
+      <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
+      <a class="pl-1 my-2 my-sm-0 text-white" type="submit"><h5>search</h5></a>
     </form>
   </div>
  </div>
