@@ -9,3 +9,10 @@ def articles_list(request):
         'posts': posts,
     }
     return render(request, 'articles/articles_list.html', context)
+
+def this_post(request, post_id):
+	post = Article.objects.get(id=post_id)
+	context = {
+		'post': post,
+	}
+	return render(request, 'articles/this_post.html', context)
