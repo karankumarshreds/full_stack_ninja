@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Article
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def articles_list(request):
@@ -16,3 +17,7 @@ def this_post(request, post_id):
 		'post': post,
 	}
 	return render(request, 'articles/this_post.html', context)
+
+@login_required(login_url="/accountslogin")
+def review(request):
+	return render(request, 'articles/review.html', {})
