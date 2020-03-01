@@ -1,0 +1,12 @@
+{% extends 'articles/base.html' %}
+
+{% block content %}
+<div class="container">
+	<form class="login" action="{%url 'login'%}" method="POST">
+		{%csrf_token%}
+		{{form}}
+		{{alert}}
+		<input type="submit" value="login">
+	</form>
+</div>
+{% endblock %}
