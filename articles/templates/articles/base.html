@@ -33,7 +33,13 @@
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="{% url 'register' %}">register <span class="sr-only">(current)</span></a>
-      </li>          
+      </li>
+      <li class="nav-item active">
+        <form class="logout" id="form1" action="{%url 'logout'%}" method="POST">
+          {%csrf_token%}
+          <button type="submit" class="btn" form="form1">logout</button> 
+        </form>
+      </li>           
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control  searchbox mr-sm-2" type="search" placeholder="" aria-label="Search">

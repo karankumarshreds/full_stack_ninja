@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm as uc_form
 from django.contrib.auth.forms import AuthenticationForm as a_form
-from django.contrib.auth import login
+from django.contrib.auth import login, logout
 
 # Create your views here.
 def register(request):
@@ -32,5 +32,11 @@ def log_in(request):
 		form = a_form()
 		context = {'form': form}
 		return render(request, 'accounts/login.html', context)
+
+def log_out(request):
+	if request.method == 'POST':
+		logout(request)
+		return redirect('/articles')
+
 
 
