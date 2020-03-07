@@ -24,7 +24,11 @@ def review(request):
 	if request.method == 'POST':
 		form = forms.CreateReview(request.POST)
 		if form.is_valid():
-			form.save()
+			#wait, before saving, make an instance of 
+			# what you're about to save (commit=False)
+			instance = form.save(commit=False)
+			instance.author = request.user
+			instance.save()
 			return redirect('/articles')
 	else:	
 		form = forms.CreateReview()
