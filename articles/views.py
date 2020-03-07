@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Article
 from django.contrib.auth.decorators import login_required
+from . import forms
 
 # Create your views here.
 def articles_list(request):
@@ -20,4 +21,12 @@ def this_post(request, post_id):
 
 @login_required(login_url="/accountslogin")
 def review(request):
-	return render(request, 'articles/review.html', {})
+	if request.method == 'POST':
+		form = forms.CreateReview(request.POST)
+		if form.is_valid():
+			form.save()
+			return redirect('/articles')
+	else:	
+		form = forms.CreateReview()
+		context = {'form': form}
+		return render(request, 'articles/review.html', context)

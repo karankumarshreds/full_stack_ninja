@@ -1,1 +1,9 @@
 <h1>REVIEW</h1>
+
+<div class="review">
+    <form class="review-form" action="{% url 'review'%}" method="POST">
+        {%csrf_token%}
+        {{form}}
+        <input type="submit" name="submit-review" value="submit">
+    </form>
+</div>
