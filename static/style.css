@@ -47,6 +47,26 @@ h1.sign-up{
 	color:white !important;
 }
 
+#skills{
+	font-family: 'Montserrat' !important;
+}
+
+.card-header{
+	background-color: #d580ff !important;
+	/* border-radius: 50px !important; */
+	border-radius: 70px 0px 70px 0px !important;
+}
+
+.card{
+	/* border-radius: 50px !important; */
+	border-color: white !important;
+}
+
+.skill-head{
+	color: white !important;
+	text-decoration-color: #d580ff !important;
+	font-size: 20px !important;
+}
 
 /*
 .page-footer{

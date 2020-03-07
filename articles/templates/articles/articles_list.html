@@ -14,13 +14,72 @@
 	</div>
 </div>
 
+<div class="container"  id="skills">
+	<h1 class="skills mb-4">Primary Skills</h1>
+	<div class="accordion" id="accordionExample">
+		<div class="card my-2">
+		  <div class="card-header" id="headingOne">
+			<h2 class="mb-0">
+			  <button class="btn btn-link collapsed skill-head" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+				Scripting
+			  </button>
+			</h2>
+		  </div>
+	  
+		  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+			<div class="card-body">
+				<ul>
+				BODY 1
+				</ul>
+			</div>
+		  </div>
+		</div>
+		<div class="card my-2">
+		  <div class="card-header" id="headingTwo">
+			<h2 class="mb-0">
+			  <button class="btn btn-link collapsed skill-head" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+				DevOps
+			  </button>
+			</h2>
+		  </div>
+		  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+			<div class="card-body">
+				<ul>
+				<li>Deployed the website on Docker containers by writing the Dockerfiles and orchestrating using Docker Swarm.</li>
+				<li>Knowledge of Deploying website on AWS Elastic Beanstalk using GIT (VCS) and writing the CI/CD pipeline using Travis CI.</li>
+				<li>Self built a basic WebApp (in Django Framework) and wrote a CI/CD pipeline script on Jenkins to deploy the WebApp on AWS instance using Docker single handedly.   </li>
+				<li>Kubernetes Certified Administrator (CKA 2020)</li>
+				</ul>		
+			</div>
+		  </div>
+		</div>
+		<div class="card my-2">
+		  <div class="card-header" id="headingThree">
+			<h2 class="mb-0">
+			  <button class="btn btn-link collapsed skill-head" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+				Web Development
+			  </button>
+			</h2>
+		  </div>
+		  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+			<div class="card-body">
+			  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+			</div>
+		  </div>
+		</div>
+	  </div>
+</div>
+
+
 <div class="bg-custom">
 	<div class="container">
-		<h1 class="article-list">My Skills</h1>
+		<h1 class="article-list">Colleague Reviews</h1>
 		{% for post in posts %}
-	    	<h5 class="title"><a class="tits" href="{% url 'this_post' post_id=post.id %}">{{ post.title }}</a></h5>
-	    	<p class='small'>{{ post.date }}</p>	
-	    	<p1>{{ post.snippet }}</p1>
+			<div class="card">
+				<h5 class="title"><a class="tits" href="{% url 'this_post' post_id=post.id %}">{{ post.title }}</a></h5>
+				<p class='small'>{{ post.date }}</p>	
+				<p1>{{ post.snippet }}</p1>
+			</div>
 		{% endfor %}
 	</div>	
 </div>
