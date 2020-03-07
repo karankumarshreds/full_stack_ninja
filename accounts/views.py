@@ -30,10 +30,11 @@ def log_in(request):
 			return redirect('/accountslogin')
 	else:
 		form = a_form()
-		context = {'form': form}
-		return render(request, 'accounts/login.html', context)
+	context = {'form': form}
+	return render(request, 'accounts/login.html', context)
 
 def log_out(request):
+	
 	if request.method == 'POST':
 		logout(request)
 		return redirect('/articles')
