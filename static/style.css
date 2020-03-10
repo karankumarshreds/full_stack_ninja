@@ -1,6 +1,6 @@
 .navbar {
 	color: black;
-	background-color: #d580ff;
+	background-color: #9147db;
 }
 
 #search-button: {
@@ -8,7 +8,7 @@
 }
 
 a.tits {
-    color: #c65efa !important;
+    color: #9147db !important;
 }
 
 .bg-custom{
@@ -52,7 +52,7 @@ h1.sign-up{
 }
 
 .card-header{
-	background-color: #d580ff !important;
+	background-color: #9147db !important;
 	/* border-radius: 50px !important; */
 	/* border-radius: 70px 0px 70px 0px !important; */
 }
@@ -65,7 +65,7 @@ h1.sign-up{
 
 .skill-head{
 	color: white !important;
-	text-decoration-color: #d580ff !important;
+	text-decoration-color: #9147db !important;
 	font-size: 20px !important;
 	text-decoration: none !important;
 }
@@ -76,16 +76,17 @@ body{
 
 .write-review-button{
 	text-decoration: none !important;
-	border-color: #d580ff !important;
+	border-color: #9147db !important;
 }
 
 .write-review-button:hover{
-	background-color: #d580ff !important;
+	/* background-color: #d580ff !important; */
+	background-color: #9147db !important;
 	border-color: black;
 }
 
 .write-review-link{
-	color: #d580ff !important;
+	color: #9147db !important;
 }
 
 .write-review-link:hover{
@@ -94,16 +95,16 @@ body{
 }
 
 a.see-more{
-	color: #ba4df1 !important;
+	color: #9147db !important;
 }
 
 .all-reviews-head{
-	color: #ba4df1 !important;
+	color: #9147db !important;
 	font-weight: lighter !important;
 }
 
 .footer-copyright{
-	background: #ba4df1 !important;
+	background: #9147db !important;
 	color: white !important;
 }
 
