@@ -29,7 +29,11 @@
 		  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
 			<div class="card-body">
 				<ul>
-				BODY 1
+				<li>Helped my project/client (Equinor @Norway) to reduce daily tickets count by 20%  by automating the reboot multiple hung RGS servers using python to fetch dead hosts information using API and bash script to reboot them. </li>
+				<li>Helped my project/client (Equinor @Norway) with automation of multiple Unix tasks using bash shell scripting and python scripting : ‘health-checks’,  ‘FileSystem monitoring’ and ‘Web Scraping’ to collect servers information via command line.</li>
+				<li>Helped the team by building a script for  ‘HPC Cluster jobs handling’  which helped reduce the ticket(alerts) count by 40%</li>
+				<li>Helped team with writing bash script (single handedly) to monitor NFS shared storage Read/Write speed checks which logs shared storage details and their speeds.</li>
+				<li>Helped team with writing a bash script (single handedly) to upgrade the ‘firmware’ of the entire cluster.</li>
 				</ul>
 			</div>
 		  </div>
@@ -73,14 +77,17 @@
 
 <div class="bg-custom">
 	<div class="container">
-		<h1 class="article-list">Colleague Reviews</h1>
+		<h1 class="article-list">Colleague Reviews</h1><hr>
 		{% for post in posts %}
 			<div class="card">
-				<h5 class="title"><a class="tits" href="{% url 'this_post' post_id=post.id %}">{{ post.title }}</a></h5>
+				<h5 class="title"><a class="tits" href="{% url 'this_post' post_id=post.id %}" style="text-decoration: none;">{{ post.title }}</a></h5>
 				<p class='small'>{{ post.date }}</p>	
 				<p1>{{ post.snippet }}</p1>
+				<hr>
 			</div>
 		{% endfor %}
+		<a class = "see-more" style="text-decoration: none;" href="{%url 'all_reviews'%}">Read all reviews</a>		
+		
 	</div>	
 </div>
 {% endblock %}

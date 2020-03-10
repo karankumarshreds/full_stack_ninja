@@ -28,18 +28,26 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-	     <li class="nav-item active">
+
+      {%if request.user.is_authenticated %}
+      <li class="nav-item active">
+        <form class="logout" id="form1" action="{%url 'logout'%}" method="POST">
+          {%csrf_token%}
+          
+          <button type="submit" class="btn logout" form="form1">logout</button> 
+        </form>
+      </li>    
+      {%else%}
+
+      <li class="nav-item active">
         <a class="nav-link" href="{% url 'login' %}">login <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="{% url 'register' %}">register <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item active">
-        <form class="logout" id="form1" action="{%url 'logout'%}" method="POST">
-          {%csrf_token%}
-          <button type="submit" class="btn logout" form="form1">logout</button> 
-        </form>
-      </li>           
+
+      {%endif%}
+
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control  searchbox mr-sm-2" type="search" placeholder="" aria-label="Search">

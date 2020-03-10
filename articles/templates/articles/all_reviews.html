@@ -1,0 +1,14 @@
+{% extends 'articles/base.html' %}
+
+{%block content%}
+<div class="container">
+</br>
+    {% for post in posts %}
+        <h4 class=" all-reviews-head">{{post.title}}</h4>
+        <p class="small">{{post.date}} | {{post.author}}</p>
+        <p1>{{post.body}}</p1>
+        <hr>
+    {%endfor%}
+    <button type="button" class="btn write-review-button"><a class="write-review-link" style="text-decoration: none;" href="{%url 'review'%}">add review</a></button> 
+</div>
+{%endblock%}

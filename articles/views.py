@@ -8,9 +8,15 @@ from . import forms
 def articles_list(request):
     posts = Article.objects.all().order_by('date')
     context = {
-        'posts': posts,
+        'posts': posts[:3], 'range': range(3)
     }
     return render(request, 'articles/articles_list.html', context)
+
+def all_reviews(request):
+	posts = Article.objects.all().order_by('date')
+	context = { 'posts': posts }
+	return render(request, 'articles/all_reviews.html', context)
+
 
 def this_post(request, post_id):
 	post = Article.objects.get(id=post_id)
