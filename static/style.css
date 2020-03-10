@@ -102,6 +102,14 @@ a.see-more{
 	font-weight: lighter !important;
 }
 
+.footer-copyright{
+	background: #ba4df1 !important;
+	color: white !important;
+}
+
+a.footer-copyright{
+	color: white !important;
+}
 /*
 .page-footer{
 	background-color: #d580ff;
