@@ -6,7 +6,7 @@ from . import forms
 
 # Create your views here.
 def articles_list(request):
-    posts = Article.objects.all().order_by('date')
+    posts = Article.objects.all().order_by('-date')
     context = {
         'posts': posts[:3], 'range': range(3)
     }
